@@ -40,7 +40,7 @@ contract Bank {
         require(balances[msg.sender] >= amount, "Balance is not enought");
         balances[msg.sender] -= amount;
         
-        // Send monet back to user
+        // Send money back to user
         msg.sender.transfer(amount);
         
         // broadcast event
